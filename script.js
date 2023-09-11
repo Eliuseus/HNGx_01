@@ -10,6 +10,11 @@ const CurrentUTCtime = new Date(currentDate);
 let time = CurrentUTCtime.getTime();
 let hours=CurrentUTCtime.getUTCHours();
 const minutes=CurrentUTCtime.getUTCMinutes();
-const Currenttime=`${hours}:${minutes<10?"0" : ""}${minutes}`;
+const seconds=CurrentUTCtime.getUTCSeconds();
+const milliseconds=CurrentUTCtime.getUTCMilliseconds();
+const Currenttime=`${hours}:${minutes<10?"0" : ""}${minutes}:${seconds}:${milliseconds}`;
 
 document.getElementById("CurrentUTCtime").innerHTML = Currenttime;
+
+
+
